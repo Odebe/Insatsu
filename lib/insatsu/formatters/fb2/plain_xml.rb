@@ -40,14 +40,16 @@ module Insatsu
         end
 
         def xml_paragraphs_str(pars)
-          pars.each do |par|
-            case par.class
-            when Insatsu::Entities::Paragraph
+          puts pars.inspect
+          pars.map do |par|
+            if par.is_a? Insatsu::Entities::Paragraph
               xml_text(par.text)
-            when Insatsu::Entities::Image
+            elsif par.is_a? Insatsu::Entities::Image
               xml_image_href(par.filename)
+            else
+              ''
             end
-          end
+          end.join("\n")
         end
 
         def xml_binary_data

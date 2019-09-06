@@ -12,7 +12,7 @@
                 
               <section>
                 <title><p>123</p></title>
-                [#<Insatsu::Entities::Paragraph:0x0000562ae11c39c0 @text="123123">]
+                <p>123123</p>
               </section>
             
                 
