@@ -1,0 +1,21 @@
+
+            <?xml version="1.0" encoding="UTF-8"?>
+            <FictionBook xmlns="http://www.gribuser.ru/xml/fictionbook/2.0" xmlns:l="http://www.w3.org/1999/xlink">
+              <description>
+                <title-info>
+                  <book-title>test_book</book-title>
+                  <coverpage></coverpage>
+                </title-info>
+              </description>
+               <body>
+                <title><p>test_book</p></title>
+                
+              <section>
+                <title><p>123</p></title>
+                [#<Insatsu::Entities::Paragraph:0x0000562ae11c39c0 @text="123123">]
+              </section>
+            
+                
+              </body>
+            </FictionBook>
+          

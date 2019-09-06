@@ -7,7 +7,7 @@ module Insatsu
         end
 
         # TODO: refactor this peace of code later. lol
-        def to_xml
+        def call
           %Q(
             <?xml version="1.0" encoding="UTF-8"?>
             <FictionBook xmlns="http://www.gribuser.ru/xml/fictionbook/2.0" xmlns:l="http://www.w3.org/1999/xlink">
@@ -42,9 +42,9 @@ module Insatsu
         def xml_paragraphs_str(pars)
           pars.each do |par|
             case par.class
-            when Insatsu::Paragraph
+            when Insatsu::Entities::Paragraph
               xml_text(par.text)
-            when Insatsu::Image
+            when Insatsu::Entities::Image
               xml_image_href(par.filename)
             end
           end
@@ -70,7 +70,7 @@ module Insatsu
         end
 
         def sections
-          @book.sections
+          @book.chapters
         end
 
         def title
@@ -81,6 +81,9 @@ module Insatsu
           @book.images.first
         end
 
+        def images
+          @book.images
+        end
       end
     end
   end  
